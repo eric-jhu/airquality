@@ -1,7 +1,8 @@
 import sqlite3,ast,hashlib,os,requests,json
 from bs4 import BeautifulSoup
 
-conn = sqlite3.connect("airquality.db") #資料庫連結
+cur_path = os.path.dirname(__file__)#當前資料夾
+conn = sqlite3.connect(cur_path+"/"+"airquality.db") #資料庫連結
 cursor = conn.cursor() #cursor物件  
 
 #建立存放資料庫
